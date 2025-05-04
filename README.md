@@ -33,6 +33,8 @@ to the browser — not the PHP code
 
 ## 🔹 Initial Setup of PHP (on Windows, macOS, and Linux)
 You can set up PHP in two main ways:
+1- Using XAMPP 
+2- Manual Setup (Advanced Users)
 ### ✅ Method 1: Using XAMPP (Recommended for Beginners)
 XAMPP is a free package that includes:
 - Apache server
@@ -88,5 +90,4 @@ Hey, This's a First PHP web-page
 Hey, This's a first script of PHP
 ```
 
-### ✅ Method 2: Manual Setup (Advanced Users)
-
+--- 
