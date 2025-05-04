@@ -58,7 +58,7 @@ echo "PHP is working!";
 ```
 Run in Browser
 - Open your browser and visit:
-<a href="#"> http://localhost/test.php </a>
+<a> http://localhost/test.php </a>
 - You should see: PHP is working!
 - Or you can use the HTML in PHP file:
 ``` php
