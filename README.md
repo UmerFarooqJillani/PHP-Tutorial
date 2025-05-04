@@ -49,7 +49,7 @@ XAMPP is a free package that includes:
 - MySQL (optional, for database)
 #### Write PHP Code
 - Open this folder: C:\xampp\htdocs
-- Create a new file/folder: <b> test.php or xyz/test.php </b>
+- Create a new file/folder: <b> test.php </b> or  <b> xyz/test.php </b>
 - Add this code:
 ``` php
 <? php
@@ -58,7 +58,7 @@ echo "PHP is working!";
 ```
 Run in Browser
 - Open your browser and visit:
-<a http="#"> http://localhost/test.php </a>
+<a href="#"> http://localhost/test.php </a>
 - You should see: PHP is working!
 - Or you can use the HTML in PHP file:
 ``` php
@@ -87,3 +87,4 @@ Hey, This's a first script of PHP
 ```
 
 ### ✅ Method 2: Manual Setup (Advanced Users)
+
