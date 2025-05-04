@@ -11,6 +11,6 @@
     </div>
     <?php       // opening tag
         echo "Hey, This's a first script of PHP";
-    // Closing tag ?>      
+    // Closing tag ?> 
 </body>
 </html>
