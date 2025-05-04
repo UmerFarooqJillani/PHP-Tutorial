@@ -3,7 +3,7 @@
 - PHP stands for: Hypertext Preprocessor
 - PHP is a backend/server-side scripting language. When a user opens a webpage in the browser, the PHP code runs on the server, and only the result (HTML) is sent to the user's browser.
 - PHP is a server scripting language, and a powerful tool for making dynamic and interactive Web pages.
-
+- PHP are not case-sensitive.
 - For example, if a page has this PHP code:
 ```PHP
 <? php
@@ -24,6 +24,8 @@ to the browser — not the PHP code
 - PHP can add, delete, modify data in your database
 - PHP can be used to control user-access
 - PHP can encrypt data
+- PHP supports a wide range of databases
+
 ### What is a PHP File?
 - PHP files can contain text, HTML, CSS, JavaScript, and PHP code
 - PHP code is executed on the server, and the result is returned to the browser as plain HTML

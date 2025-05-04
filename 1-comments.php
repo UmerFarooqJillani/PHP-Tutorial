@@ -8,6 +8,8 @@
 <body>
     <?php
     //single Line comment
+
+    # This is also a single-line comment
     
     /* This is 
         a 
