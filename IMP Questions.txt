@@ -8,8 +8,10 @@ Why would you use $GLOBALS instead of global?
 Answer:
     $GLOBALS is more flexible and allows dynamic access to global variables using their names
     as string keys. It can be useful in generic functions, loops, or variable functions.
--------------------------------------------------------------------------------------------------
-
+--------------------------------------(3)-----------------------------------------------------------
+What happens when a numeric string is added to a number in PHP?
+Answer:
+    PHP automatically converts the string to a number and performs the addition.
 -------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------
