@@ -13,10 +13,6 @@
         - In PHP, a variable starts with the $ sign
         - Variable names are case-sensitive ($age and $AGE are two different variables)
         - A variable name cannot start with a number
-     -> Is PHP a strongly typed language?
-        Answer:
-                No, PHP is loosely typed, meaning you don’t need to declare the
-                data type of a variable. It’s determined automatically. 
     */ 
     $name = "Umer Farooq Jillani";  // $name is an string
     $name_2 = 'Abu Bakar Jillani';  // $name_2 is an string
@@ -125,13 +121,6 @@
     // However, sometimes we want a local variable NOT to be deleted. We need it for a further job.
     // Then, each time the function is called, that variable will still have the information 
     // it contained from the last time the function was called.
-    /*
-    -> Why would you use $GLOBALS instead of global?
-        Answer:
-                $GLOBALS is more flexible and allows dynamic access to global 
-                variables using their names as string keys.
-                It can be useful in generic functions, loops, or variable functions.
-    */
     function myTest_5() {
         static $x = 0;
         echo "<p>$x</p>";
