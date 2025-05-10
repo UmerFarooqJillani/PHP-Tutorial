@@ -12,7 +12,16 @@ Answer:
 What happens when a numeric string is added to a number in PHP?
 Answer:
     PHP automatically converts the string to a number and performs the addition.
--------------------------------------------------------------------------------------------------
+---------------------------------------(9)----------------------------------------------------------
+What is an Array?
+Answer:
+    An array is a special variable that can hold many values under a single name, 
+    and you can access the values by referring to an index number or name.
+    PHP Array Types
+        In PHP, there are three types of arrays:
+            1- Indexed arrays - Arrays with a numeric index
+            2- Associative arrays - Arrays with named keys
+            3- Multidimensional arrays - Arrays containing one or more arrays
 -------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------
