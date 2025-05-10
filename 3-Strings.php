@@ -49,7 +49,13 @@
     // The last character has index -1 (or) total_index - 5 = start this index
     print "<br>" . substr($a, -5, 3); // Get the 3 characters, starting from the "l" in world (index -5)
     echo "<br>" . substr($a, 5, -3);  // Farooq Jill
-    
+
+    // Concatenation assignment
+    print "<br>";
+    $txt1 = "Hello";
+    $txt2 = " world!";
+    $txt1 .= $txt2;      // Appends $txt2 to $txt1
+    echo $txt1;         // Hello world!
     ?>
 </body>
 </html>
