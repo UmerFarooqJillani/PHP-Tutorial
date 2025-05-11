@@ -61,7 +61,23 @@
         }
         $a = sumMyNumbers(5, 2, 6, 2, 7, 7);
         echo $a;
+        print "<br>";
 //------------------------------------------
+        // Build-in Function in PHP
+        // isset() = Return TRUE if a variable is declared and not null 
+        $userName = "Umer Farooq Jillani";
+        if(isset($userName)){
+                print "This variable is set";
+        }else{
+                print "This variable is not set";
+        }
+        // empty() = Return True if a variable is not declared, false, null, "" 
+        $Name = "";
+        if(empty($Name)){
+                print "<br>This variable is empty";
+        }else{
+                print "<br>This variable is : $Name";
+        }
     ?>
 </body>
 </html>
