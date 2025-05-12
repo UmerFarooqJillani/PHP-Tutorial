@@ -13,10 +13,10 @@
     </form> -->
     <!-- ----------------------  comment one and check/use one by one ---------------------- -->
     <!----------(2)----------------->
-    <!-- <form method="get">
+    <form method="get">
         Name: <input type="text" name="name" placeholder="Enter Name">
         <input type="submit">
-    </form> -->
+    </form>
     <!----------(3)----------------->
     <!-- <form method="post">
         <fieldset style="border: none;">
@@ -35,7 +35,7 @@
         <input type="reset">
     </form> -->
     <!----------(4)----------------->
-    <form method="post">
+    <!-- <form method="post">
         <fieldset style="border: none;">
             <label for="male">
                 <input type="checkbox" value="male" name="gender[]" id="male"> Male
@@ -48,7 +48,7 @@
             </label>
         </fieldset>
         <input type="submit" name="submit">
-    </form>
+    </form> -->
     <?php
 // ----------------------------------------------
         /*
@@ -119,9 +119,9 @@
             //     echo "<br>" . $data . "<br>";
             // }
 
-            // foreach ($_GET as $key => $value){      // $_GET, $_POST is an associative array
-            //     print "$key = $value <br>";
-            // }
+            foreach ($_GET as $key => $value){      // $_GET, $_POST is an associative array
+                print "$key = $value <br>";
+            }
             // ----------(3)-----------------
             // if(isset($_POST['gender'])){
             //     $checkpoint = $_POST['gender'];
