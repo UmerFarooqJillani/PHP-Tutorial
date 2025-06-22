@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - The Next Apartment</title>
+    <link rel="shortcut icon" href="/../Project/src/Favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../Project/src/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="../Project/src/images/nestapt.spng_.png" alt="" width="55" height="55">
+                The Next Apartment
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="apartments.html">Apartments For Rent</a></li>
+                            <li><a class="dropdown-item" href="reviews.html">Reviews</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signin.html">Sign In/Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Contact Us</h1>
+            <p class="lead">We're here to answer your questions and help you find your perfect apartment.</p>
+        </div>
+    </header>
+
+    <!-- Contact Information -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <!-- <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div> -->
+                            <i class="fas fa-map-marker-alt display-3 text-primary mb-3"></i>
+                            <h5 class="card-title">Visit Us</h5>
+                            <p class="card-text">
+                                123 Apartment Ave<br>
+                                City, State 12345<br>
+                                United States
+                            </p>
+                            <a href="https://maps.google.com" target="_blank" class="btn btn-outline-primary">Get
+                                Directions</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <!-- <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                <i class="fas fa-phone"></i>
+                            </div> -->
+                            <i class="fas fa-phone display-3 text-primary mb-3"></i>
+                            <h5 class="card-title">Call Us</h5>
+                            <p class="card-text">
+                                Main Office: (123) 456-7890<br>
+                                Leasing: (123) 456-7891<br>
+                                Maintenance: (123) 456-7892
+                            </p>
+                            <a href="tel:+11234567890" class="btn btn-outline-primary">Call Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <!-- <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                <i class="fas fa-envelope"></i>
+                            </div> -->
+                            <i class="fas fa-envelope display-3 text-primary mb-3"></i>
+                            <h5 class="card-title">Email Us</h5>
+                            <p class="card-text">
+                                General Inquiries: info@thenextapartment.com<br>
+                                Leasing: leasing@thenextapartment.com<br>
+                                Support: support@thenextapartment.com
+                            </p>
+                            <a href="mailto:info@thenextapartment.com" class="btn btn-outline-primary">Email Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow">
+                        <div class="card-body p-5">
+                            <h2 class="text-center mb-4">Send Us a Message</h2>
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <select class="form-select" id="subject" required>
+                                        <option value="" selected disabled>Select a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="leasing">Leasing Information</option>
+                                        <option value="tour">Schedule a Tour</option>
+                                        <option value="maintenance">Maintenance Request</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="newsletter">
+                                    <label class="form-check-label" for="newsletter">Subscribe to our newsletter</label>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Hours -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Office Hours</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Day</th>
+                                            <th>Office Hours</th>
+                                            <th>Leasing Hours</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Monday</td>
+                                            <td>9:00 AM - 6:00 PM</td>
+                                            <td>10:00 AM - 5:00 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tuesday</td>
+                                            <td>9:00 AM - 6:00 PM</td>
+                                            <td>10:00 AM - 5:00 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wednesday</td>
+                                            <td>9:00 AM - 6:00 PM</td>
+                                            <td>10:00 AM - 5:00 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Thursday</td>
+                                            <td>9:00 AM - 6:00 PM</td>
+                                            <td>10:00 AM - 5:00 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Friday</td>
+                                            <td>9:00 AM - 6:00 PM</td>
+                                            <td>10:00 AM - 5:00 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Saturday</td>
+                                            <td>10:00 AM - 4:00 PM</td>
+                                            <td>10:00 AM - 4:00 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sunday</td>
+                                            <td>Closed</td>
+                                            <td>By Appointment Only</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="text-center mt-3 mb-0">
+                                <small class="text-muted">Note: Holiday hours may vary. Please call ahead on
+                                    holidays.</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Find Us</h2>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.8261813865493!2d74.2275820742989!3d31.418914752149924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919011d595dd1a5%3A0x6909b216d3d7c4b4!2sSuperior%20University%20Gold%20Campus!5e0!3m2!1sen!2s!4v1746158421110!5m2!1sen!2s"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How do I schedule a tour?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You can schedule a tour by calling our leasing office at (123) 456-7891, sending an
+                                    email to leasing@thenextapartment.com, or by filling out the contact form on this
+                                    page. We offer both in-person and virtual tours to accommodate your preferences.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What is the application process?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our application process is simple. After finding an apartment you like, you can
+                                    apply online through our resident portal or in person at our leasing office. The
+                                    application includes a credit and background check, verification of income, and
+                                    rental history review. The application fee is $50 per applicant.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Are utilities included in the rent?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Utility inclusion varies by property. Some of our properties include water, trash,
+                                    and sewer in the rent, while others require residents to set up their own utilities.
+                                    Please check the specific apartment listing or contact our leasing office for
+                                    details about the property you're interested in.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    What is your pet policy?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Most of our properties are pet-friendly. We typically allow up to two pets per
+                                    apartment with some breed and weight restrictions. There is a pet deposit of $300
+                                    and a monthly pet rent of $35 per pet. Service animals are exempt from these fees
+                                    and restrictions in accordance with fair housing laws.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    How do I submit a maintenance request?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Current residents can submit maintenance requests through our resident portal, by
+                                    calling our maintenance line at (123) 456-7892, or by emailing
+                                    support@thenextapartment.com. For emergency maintenance issues outside of office
+                                    hours, please call our 24/7 emergency maintenance line.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5><i class="fas fa-building me-2"></i> The Next Apartment</h5>
+                    <p>Providing quality living spaces for individuals and families since 2010.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="apartments.html" class="text-white">Apartments</a></li>
+                        <li><a href="reviews.html" class="text-white">Reviews</a></li>
+                        <li><a href="contact.html" class="text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Information</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Apartment Ave, Lahore, Pakistan</li>
+                        <li><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@thenextapartment.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM, Sat: 10AM-4PM</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 The Next Apartment. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+<!-- <script>
+    // Simple form validation and submission
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Thank you for your message! We will get back to you soon.');
+        this.reset();
+    });
+</script> -->

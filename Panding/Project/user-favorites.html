@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorites - The Next Apartment</title>
+    <link rel="shortcut icon" href="../Project/src/Favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- <i class="fas fa-building me-2"></i> -->
+                <img src="../Project/src/images/nestapt.spng_.png" alt="" width="55" height="55">
+                The Next Apartment
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="apartments.html">Apartments For Rent</a></li>
+                            <li><a class="dropdown-item" href="reviews.html">Reviews</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <!-- User Dropdown -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
+                            <img src="/../Project/src/images/John.png" class="rounded-circle me-2" alt="User" width="32" height="32">
+                            <span>John Doe</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="user-dashboard.html"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a></li>
+                            <!-- user-profile.html -->
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>My Profile</a></li>
+                            <li><a class="dropdown-item active" href="user-favorites.html"><i class="fas fa-heart me-2"></i>Favorites</a></li>
+                            <li><a class="dropdown-item" href="user-applications.html"><i class="fas fa-file-alt me-2"></i>My Applications</a></li>
+                            <li><a class="dropdown-item" href="user-complaints.html"><i class="fas fa-exclamation-circle me-2"></i>Complaints</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <!-- user-settings.html -->
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                            <li><a class="dropdown-item" href="signin.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- User Favorites Content -->
+    <div class="container py-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h1 class="mb-0">My Favorites</h1>
+                <p class="text-muted">Apartments you've saved for future reference.</p>
+            </div>
+            <div>
+                <div class="dropdown">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-sort me-1"></i> Sort By
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="sortDropdown">
+                        <li><a class="dropdown-item" href="#">Price: Low to High</a></li>
+                        <li><a class="dropdown-item" href="#">Price: High to Low</a></li>
+                        <li><a class="dropdown-item" href="#">Bedrooms</a></li>
+                        <li><a class="dropdown-item" href="#">Date Added</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Favorites List -->
+        <div class="row g-4">
+            <!-- Favorite 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="position-relative">
+                        <img src="/../Project/src/images/Main-First-Banner.jpg" class="card-img-top" alt="Luxury Downtown Loft">
+                        <button class="btn btn-sm btn-danger position-absolute top-0 end-0 m-2" title="Remove from favorites">
+                            <i class="fas fa-heart-broken"></i>
+                        </button>
+                        <span class="badge bg-success position-absolute bottom-0 start-0 m-2">Available Now</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Luxury Downtown Loft</h5>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-primary fw-bold">$1,850/month</span>
+                            <div class="text-warning small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-muted ms-1">4.5</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="badge bg-light text-dark me-1">2 Beds</span>
+                            <span class="badge bg-light text-dark me-1">2 Baths</span>
+                            <span class="badge bg-light text-dark">1,200 sq ft</span>
+                        </div>
+                        <p class="card-text small">Spacious 2-bedroom loft with modern amenities in the heart of downtown. Features include hardwood floors, stainless steel appliances...</p>
+                        <div class="d-flex justify-content-between mt-3">
+                            <!-- user-apartment-details.html -->
+                            <a href="#" class="btn btn-sm btn-primary">View Details</a>
+                            <!-- user-tours.html -->
+                            <a href="#" class="btn btn-sm btn-outline-primary">Schedule Tour</a>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-muted small">
+                        <i class="fas fa-calendar-alt me-1"></i> Added on May 1, 2023
+                    </div>
+                </div>
+            </div>
+
+            <!-- Favorite 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="position-relative">
+                        <img src="/../Project/src/images/classic-2.jpg" class="card-img-top" alt="Modern Studio Apartment">
+                        <button class="btn btn-sm btn-danger position-absolute top-0 end-0 m-2" title="Remove from favorites">
+                            <i class="fas fa-heart-broken"></i>
+                        </button>
+                        <span class="badge bg-success position-absolute bottom-0 start-0 m-2">Available Now</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Modern Studio Apartment</h5>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-primary fw-bold">$1,100/month</span>
+                            <div class="text-warning small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-muted ms-1">4.0</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="badge bg-light text-dark me-1">Studio</span>
+                            <span class="badge bg-light text-dark me-1">1 Bath</span>
+                            <span class="badge bg-light text-dark">650 sq ft</span>
+                        </div>
+                        <p class="card-text small">Cozy studio with high-end finishes and amazing city views. Features include a modern kitchen with quartz countertops, large windows...</p>
+                        <div class="d-flex justify-content-between mt-3">
+                            <!-- user-apartment-details.html -->
+                            <a href="#" class="btn btn-sm btn-primary">View Details</a>
+                            <!-- user-tours.html -->
+                            <a href="#" class="btn btn-sm btn-outline-primary">Schedule Tour</a>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-muted small">
+                        <i class="fas fa-calendar-alt me-1"></i> Added on May 3, 2023
+                    </div>
+                </div>
+            </div>
+
+            <!-- Favorite 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="position-relative">
+                        <img src="/../Project/src/images/Classic-main.jpg" class="card-img-top" alt="Spacious Family Apartment">
+                        <button class="btn btn-sm btn-danger position-absolute top-0 end-0 m-2" title="Remove from favorites">
+                            <i class="fas fa-heart-broken"></i>
+                        </button>
+                        <span class="badge bg-warning text-dark position-absolute bottom-0 start-0 m-2">Coming Soon</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Spacious Family Apartment</h5>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-primary fw-bold">$2,200/month</span>
+                            <div class="text-warning small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-muted ms-1">5.0</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="badge bg-light text-dark me-1">3 Beds</span>
+                            <span class="badge bg-light text-dark me-1">2 Baths</span>
+                            <span class="badge bg-light text-dark">1,500 sq ft</span>
+                        </div>
+                        <p class="card-text small">3-bedroom apartment perfect for families, close to schools and parks. Features include a large living room, separate dining area...</p>
+                        <div class="d-flex justify-content-between mt-3">
+                            <!-- user-apartment-details.html -->
+                            <a href="#" class="btn btn-sm btn-primary">View Details</a>
+                            <!-- user-tours.html -->
+                            <a href="#" class="btn btn-sm btn-outline-primary">Join Waitlist</a>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-muted small">
+                        <i class="fas fa-calendar-alt me-1"></i> Added on May 5, 2023
+                    </div>
+                </div>
+            </div>
+
+            <!-- Favorite 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="position-relative">
+                        <img src="/../Project/src/images/Classic-Gallery-Image-5.jpg" class="card-img-top" alt="Luxury Penthouse Suite">
+                        <button class="btn btn-sm btn-danger position-absolute top-0 end-0 m-2" title="Remove from favorites">
+                            <i class="fas fa-heart-broken"></i>
+                        </button>
+                        <span class="badge bg-success position-absolute bottom-0 start-0 m-2">Available Now</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Luxury Penthouse Suite</h5>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-primary fw-bold">$3,500/month</span>
+                            <div class="text-warning small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-muted ms-1">4.7</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="badge bg-light text-dark me-1">3 Beds</span>
+                            <span class="badge bg-light text-dark me-1">3 Baths</span>
+                            <span class="badge bg-light text-dark">2,200 sq ft</span>
+                        </div>
+                        <p class="card-text small">Stunning penthouse with panoramic views, featuring high ceilings, floor-to-ceiling windows, gourmet kitchen with premium appliances...</p>
+                        <div class="d-flex justify-content-between mt-3">
+                            <!-- user-apartment-details.html -->
+                            <a href="#" class="btn btn-sm btn-primary">View Details</a>
+                            <!-- user-tours.html -->
+                            <a href="#" class="btn btn-sm btn-outline-primary">Schedule Tour</a>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-muted small">
+                        <i class="fas fa-calendar-alt me-1"></i> Added on May 7, 2023
+                    </div>
+                </div>
+            </div>
+
+            <!-- Favorite 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="position-relative">
+                        <img src="/../Project/src/images/Gallery-Landscape-14.jpg" class="card-img-top" alt="Cozy Garden Apartment">
+                        <button class="btn btn-sm btn-danger position-absolute top-0 end-0 m-2" title="Remove from favorites">
+                            <i class="fas fa-heart-broken"></i>
+                        </button>
+                        <span class="badge bg-success position-absolute bottom-0 start-0 m-2">Available Now</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Cozy Garden Apartment</h5>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-primary fw-bold">$1,650/month</span>
+                            <div class="text-warning small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-muted ms-1">4.0</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="badge bg-light text-dark me-1">1 Bed</span>
+                            <span class="badge bg-light text-dark me-1">1 Bath</span>
+                            <span class="badge bg-light text-dark">850 sq ft</span>
+                        </div>
+                        <p class="card-text small">Charming garden-level apartment with private patio, updated kitchen, and in-unit laundry. Located in a quiet residential neighborhood...</p>
+                        <div class="d-flex justify-content-between mt-3">
+                            <!-- user-apartment-details.html -->
+                            <a href="#" class="btn btn-sm btn-primary">View Details</a>
+                            <!-- user-tours.html -->
+                            <a href="#" class="btn btn-sm btn-outline-primary">Schedule Tour</a>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 text-muted small">
+                        <i class="fas fa-calendar-alt me-1"></i> Added on May 10, 2023
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Empty State (Hidden by default) -->
+        <div class="text-center py-5 d-none">
+            <div class="display-1 text-muted mb-4">
+                <i class="far fa-heart"></i>
+            </div>
+            <h3>No Favorites Yet</h3>
+            <p class="text-muted">You haven't saved any apartments to your favorites list.</p>
+            <a href="apartments.html" class="btn btn-primary mt-3">Browse Apartments</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5><i class="fas fa-building me-2"></i> The Next Apartment</h5>
+                    <p class="small">Providing quality living spaces for individuals and families since 2010.</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="apartments.html" class="text-white text-decoration-none">Apartments</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Information</h5>
+                    <ul class="list-unstyled small">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Apartment Ave, Lahore, Pakistan</li>
+                        <li><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@thenextapartment.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center small">
+                <p class="mb-0">&copy; 2023 The Next Apartment. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

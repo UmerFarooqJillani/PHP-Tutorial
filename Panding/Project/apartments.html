@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartments For Rent - The Next Apartment</title>
+    <link rel="shortcut icon" href="/../Project/src/Favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../Project/src/css/style.css ">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- <i class="fas fa-building me-2"></i> -->
+                <img src="../Project/src/images/nestapt.spng_.png" alt="" width="55" height="55">
+                The Next Apartment
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="apartments.html">Apartments For Rent</a></li>
+                            <li><a class="dropdown-item" href="reviews.html">Reviews</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signin.html">Sign In/Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Apartments For Rent</h1>
+            <p class="lead">Discover your perfect living space with our diverse selection of apartments.</p>
+        </div>
+    </header>
+
+    <!-- Search and Filter Section -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form id="apartmentFilterForm">
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <label for="bedroomFilter" class="form-label">Bedrooms</label>
+                                <select class="form-select" id="bedroomFilter">
+                                    <option value="">Any</option>
+                                    <option value="studio">Studio</option>
+                                    <option value="1">1 Bedroom</option>
+                                    <option value="2">2 Bedrooms</option>
+                                    <option value="3">3+ Bedrooms</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="bathroomFilter" class="form-label">Bathrooms</label>
+                                <select class="form-select" id="bathroomFilter">
+                                    <option value="">Any</option>
+                                    <option value="1">1 Bathroom</option>
+                                    <option value="2">2 Bathrooms</option>
+                                    <option value="3">3+ Bathrooms</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="priceFilter" class="form-label">Max Price</label>
+                                <select class="form-select" id="priceFilter">
+                                    <option value="">Any</option>
+                                    <option value="1000">$1,000</option>
+                                    <option value="1500">$1,500</option>
+                                    <option value="2000">$2,000</option>
+                                    <option value="2500">$2,500</option>
+                                    <option value="3000">$3,000+</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="availabilityFilter" class="form-label">Availability</label>
+                                <select class="form-select" id="availabilityFilter">
+                                    <option value="">Any</option>
+                                    <option value="now">Available Now</option>
+                                    <option value="soon">Coming Soon</option>
+                                </select>
+                            </div>
+                            <div class="col-12 d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary">Apply Filters</button>
+                                <button type="reset" class="btn btn-outline-secondary ms-2">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apartments Listing -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Available Apartments</h2>
+            
+            <!-- Apartment 1 -->
+            <div class="card mb-4 shadow-sm">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/../Project/src/images/Royal-Bed.jpg" class="img-fluid rounded-start h-100 object-fit-cover" alt="Luxury Downtown Loft">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h3 class="card-title">Luxury Downtown Loft</h3>
+                                <span class="badge bg-success">Available Now</span>
+                            </div>
+                            <p class="text-primary fw-bold fs-4">$1,850/month</p>
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <p><i class="fas fa-bed me-2"></i> 2 Bedrooms</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><i class="fas fa-bath me-2"></i> 2 Bathrooms</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><i class="fas fa-ruler-combined me-2"></i> 1,200 sq ft</p>
+                                </div>
+                            </div>
+                            <p class="card-text">Spacious 2-bedroom loft with modern amenities in the heart of downtown. Features include hardwood floors, stainless steel appliances, in-unit washer/dryer, and a private balcony with city views.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-light text-dark">Hardwood Floors</span>
+                                <span class="badge bg-light text-dark">Stainless Appliances</span>
+                                <span class="badge bg-light text-dark">In-Unit Laundry</span>
+                                <span class="badge bg-light text-dark">Balcony</span>
+                                <span class="badge bg-light text-dark">City View</span>
+                                <span class="badge bg-light text-dark">Fitness Center</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <a href="about.html" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#apartmentModal1">View Details</a>
+                                <a href="contact.html" class="btn btn-outline-primary">Schedule Tour</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Apartment 2 -->
+            <div class="card mb-4 shadow-sm">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/../Project/src/images/lobby.jpg" class="img-fluid rounded-start h-100 object-fit-cover" alt="Modern Studio Apartment">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h3 class="card-title">Modern Studio Apartment</h3>
+                                <span class="badge bg-success">Available Now</span>
+                            </div>
+                            <p class="text-primary fw-bold fs-4">$1,100/month</p>
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <p><i class="fas fa-bed me-2"></i> Studio</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><i class="fas fa-bath me-2"></i> 1 Bathroom</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><i class="fas fa-ruler-combined me-2"></i> 650 sq ft</p>
+                                </div>
+                            </div>
+                            <p class="card-text">Cozy studio with high-end finishes and amazing city views. Features include a modern kitchen with quartz countertops, large windows, built-in storage solutions, and access to rooftop terrace.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-light text-dark">Quartz Countertops</span>
+                                <span class="badge bg-light text-dark">Large Windows</span>
+                                <span class="badge bg-light text-dark">Built-in Storage</span>
+                                <span class="badge bg-light text-dark">Rooftop Access</span>
+                                <span class="badge bg-light text-dark">Pet Friendly</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <a href="about.html" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#apartmentModal2">View Details</a>
+                                <a href="contact.html" class="btn btn-outline-primary">Schedule Tour</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Apartment 3 -->
+            <div class="card mb-4 shadow-sm">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/../Project/src/images/vantage-sofa.jpg" class="img-fluid rounded-start h-100 object-fit-cover" alt="Spacious Family Apartment">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h3 class="card-title">Spacious Family Apartment</h3>
+                                <span class="badge bg-warning text-dark">Coming Soon</span>
+                            </div>
+                            <p class="text-primary fw-bold fs-4">$2,200/month</p>
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <p><i class="fas fa-bed me-2"></i> 3 Bedrooms</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><i class="fas fa-bath me-2"></i> 2 Bathrooms</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><i class="fas fa-ruler-combined me-2"></i> 1,500 sq ft</p>
+                                </div>
+                            </div>
+                            <p class="card-text">3-bedroom apartment perfect for families, close to schools and parks. Features include a large living room, separate dining area, updated kitchen, master suite with walk-in closet, and a private patio.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-light text-dark">Family Friendly</span>
+                                <span class="badge bg-light text-dark">Walk-in Closet</span>
+                                <span class="badge bg-light text-dark">Private Patio</span>
+                                <span class="badge bg-light text-dark">Near Schools</span>
+                                <span class="badge bg-light text-dark">Parking Included</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <a href="about.html" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#apartmentModal3">View Details</a>
+                                <a href="contact.html" class="btn btn-outline-primary">Join Waitlist</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Apartment 4 -->
+            <div class="card mb-4 shadow-sm">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/../Project/src/images/Executive-3-1.jpg" class="img-fluid rounded-start h-100 object-fit-cover" alt="Luxury Penthouse">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h3 class="card-title">Luxury Penthouse Suite</h3>
+                                <span class="badge bg-success">Available Now</span>
+                            </div>
+                            <p class="text-primary fw-bold fs-4">$3,500/month</p>
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <p><i class="fas fa-bed me-2"></i> 3 Bedrooms</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><i class="fas fa-bath me-2"></i> 3 Bathrooms</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><i class="fas fa-ruler-combined me-2"></i> 2,200 sq ft</p>
+                                </div>
+                            </div>
+                            <p class="card-text">Stunning penthouse with panoramic views, featuring high ceilings, floor-to-ceiling windows, gourmet kitchen with premium appliances, spa-like bathrooms, and a large private terrace.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-light text-dark">Penthouse</span>
+                                <span class="badge bg-light text-dark">Panoramic Views</span>
+                                <span class="badge bg-light text-dark">Gourmet Kitchen</span>
+                                <span class="badge bg-light text-dark">Private Terrace</span>
+                                <span class="badge bg-light text-dark">Concierge Service</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <a href="about.html" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#apartmentModal4">View Details</a>
+                                <a href="contact.html" class="btn btn-outline-primary">Schedule Tour</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apartment Amenities -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Common Amenities</h2>
+            <div class="row g-4">
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <!-- <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                <i class="fas fa-dumbbell"></i>
+                            </div> -->
+                              <i class="fas fa-dumbbell display-5 text-primary mb-3"></i>
+                            <h5 class="card-title">Fitness Center</h5>
+                            <p class="card-text">State-of-the-art fitness center with cardio equipment, free weights, and yoga space.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <!-- <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                <i class="fas fa-swimming-pool"></i>
+                            </div> -->
+                            <i class="fas fa-swimming-pool display-5 text-primary mb-3"></i>
+                            <h5 class="card-title">Swimming Pool</h5>
+                            <p class="card-text">Resort-style pool with sundeck, lounge chairs, and cabanas for relaxation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <!-- <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                <i class="fas fa-paw"></i>
+                            </div> -->
+                                   <i class="fas fa-paw display-5 text-primary mb-3"></i>
+                            <h5 class="card-title">Pet Friendly</h5>
+                            <p class="card-text">Pet-friendly community with dog park and pet washing station.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <!-- <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                <i class="fas fa-wifi"></i>
+                            </div> -->
+                                  <i class="fas fa-wifi display-5 text-primary mb-3"></i>
+                            <h5 class="card-title">High-Speed Internet</h5>
+                            <p class="card-text">Complimentary high-speed internet access throughout the community.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <!-- <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                <i class="fas fa-car"></i>
+                            </div> -->
+                                   <i class="fas fa-car display-5 text-primary mb-3"></i>
+                            <h5 class="card-title">Covered Parking</h5>
+                            <p class="card-text">Covered parking spaces and electric vehicle charging stations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <!-- <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                <i class="fas fa-couch"></i>
+                            </div> -->
+                                 <i class="fas fa-couch display-5 text-primary mb-3"></i>
+                            <h5 class="card-title">Resident Lounge</h5>
+                            <p class="card-text">Comfortable resident lounge with entertainment options and workspaces.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <!-- <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                <i class="fas fa-utensils"></i>
+                            </div> -->
+                              <i class="fas fa-utensils display-5 text-primary mb-3"></i>
+                            <h5 class="card-title">Outdoor Grilling</h5>
+                            <p class="card-text">Outdoor grilling stations and picnic areas for resident gatherings.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <!-- <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                <i class="fas fa-shield-alt"></i>
+                            </div> -->
+                            <i class="fas fa-shield-alt display-5 text-primary mb-3"></i>
+                            <h5 class="card-title">24/7 Security</h5>
+                            <p class="card-text">Secure access control system, 24/7 surveillance cameras, and on-site security personnel.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Application Process</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="row">
+                                <div class="col-md-3 mb-4 mb-md-0">
+                                    <div class="text-center">
+                                        <!-- <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                            <i class="fas fa-search"></i>
+                                        </div> -->
+                                            <i class="fas fa-search display-5 text-primary mb-3"></i>
+
+                                        <h5>1. Find Your Apartment</h5>
+                                        <p>Browse our listings and find the perfect apartment for your needs.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4 mb-md-0">
+                                    <div class="text-center">
+                                        <!-- <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                            <i class="fas fa-calendar-check"></i>
+                                        </div> -->
+                                            <i class="fas fa-calendar-check display-5 text-primary mb-3"></i>
+
+                                        <h5>2. Schedule a Tour</h5>
+                                        <p>Contact us to schedule an in-person or virtual tour of the property.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4 mb-md-0">
+                                    <div class="text-center">
+                                        <!-- <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                            <i class="fas fa-file-alt"></i>
+                                        </div> -->
+                                            <i class="fas fa-file-alt display-5 text-primary mb-3"></i>
+
+                                        <h5>3. Apply Online</h5>
+                                        <p>Complete our online application form and pay the application fee.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center">
+                                        <!-- <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                            <i class="fas fa-key"></i>
+                                        </div> -->
+                                            <i class="fas fa-key display-5 text-primary mb-3"></i>
+
+                                        <h5>4. Move In</h5>
+                                        <p>Sign your lease, pay your deposit, and get the keys to your new home!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-4">
+                                <a href="contact.html" class="btn btn-primary">Start Your Application</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Ready to Find Your Next Home?</h2>
+            <p class="lead mb-4">Contact us today to schedule a tour or learn more about our available apartments.</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Contact Us Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5><i class="fas fa-building me-2"></i> The Next Apartment</h5>
+                    <p>Providing quality living spaces for individuals and families since 2010.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="apartments.html" class="text-white">Apartments</a></li>
+                        <li><a href="reviews.html" class="text-white">Reviews</a></li>
+                        <li><a href="contact.html" class="text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Information</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Apartment Ave, Lahore, Pakistan</li>
+                        <li><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@thenextapartment.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM, Sat: 10AM-4PM</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 The Next Apartment. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+    <!-- <script>
+        // Simple form validation and submission
+        document.getElementById('apartmentFilterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Filters applied! This would normally filter the apartment listings.');
+        });
+    </script> -->

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - The Next Apartment</title>
+    <link rel="shortcut icon" href="src/Favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="src/images/nestapt.spng_.png" alt="" width="55" height="55">
+                The Next Apartment
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="apartments.html">Apartments For Rent</a></li>
+                            <li><a class="dropdown-item" href="reviews.html">Reviews</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <!-- User Dropdown -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
+                            <img src="src/images/John.png" class="rounded-circle me-2" alt="User" width="32" height="32">
+                            <span>John Doe</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item active" href="user-dashboard.html"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a></li>
+                            <!-- user-profile.html -->
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>My Profile</a></li>
+                            <li><a class="dropdown-item" href="user-favorites.html"><i class="fas fa-heart me-2"></i>Favorites</a></li>
+                            <li><a class="dropdown-item" href="user-applications.html"><i class="fas fa-file-alt me-2"></i>My Applications</a></li>
+                            <li><a class="dropdown-item" href="user-complaints.html"><i class="fas fa-exclamation-circle me-2"></i>Complaints</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <!-- user-settings.html -->
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                            <li><a class="dropdown-item" href="signin.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- User Dashboard Content -->
+    <div class="container py-5">
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <h1 class="mb-0">Welcome back, John!</h1>
+                <p class="text-muted">Here's what's happening with your apartment journey.</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <!-- user-notifications.html -->
+                <a href="#" class="btn btn-outline-primary me-2 position-relative">
+                    <i class="fas fa-bell"></i> Notifications
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        3
+                        <span class="visually-hidden">unread notifications</span>
+                    </span>
+                </a>
+                <!-- user-messages.html -->
+                <a href="#" class="btn btn-outline-primary position-relative">
+                    <i class="fas fa-envelope"></i> Messages
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        2
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Status Cards -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <div class="display-4 text-primary mb-3">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h5 class="card-title">Application Status</h5>
+                        <p class="card-text">In Review</p>
+                        <a href="user-applications.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <div class="display-4 text-primary mb-3">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h5 class="card-title">Upcoming Tours</h5>
+                        <p class="card-text">2 Scheduled</p>
+                        <!-- user-tours.html -->
+                        <a href="#" class="btn btn-sm btn-outline-primary">View Schedule</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <div class="display-4 text-primary mb-3">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h5 class="card-title">Saved Apartments</h5>
+                        <p class="card-text">5 Favorites</p>
+                        <a href="user-favorites.html" class="btn btn-sm btn-outline-primary">View Favorites</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <div class="display-4 text-primary mb-3">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <h5 class="card-title">Open Complaints</h5>
+                        <p class="card-text">1 Pending</p>
+                        <a href="user-complaints.html" class="btn btn-sm btn-outline-primary">View Complaints</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Recent Activity -->
+            <div class="col-lg-8 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="card-title mb-0">Recent Activity</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item px-0 py-3 d-flex align-items-center border-top-0 border-start-0 border-end-0">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-calendar-check text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Tour Scheduled</h6>
+                                    <p class="mb-0 text-muted small">You scheduled a tour for Luxury Downtown Loft on May 15, 2023 at 2:00 PM.</p>
+                                </div>
+                                <div class="ms-auto text-end">
+                                    <span class="badge bg-primary">Today</span>
+                                </div>
+                            </div>
+                            <div class="list-group-item px-0 py-3 d-flex align-items-center border-start-0 border-end-0">
+                                <div class="bg-success bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-file-alt text-success"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Application Submitted</h6>
+                                    <p class="mb-0 text-muted small">Your application for Modern Studio Apartment has been received and is under review.</p>
+                                </div>
+                                <div class="ms-auto text-end">
+                                    <span class="badge bg-secondary">Yesterday</span>
+                                </div>
+                            </div>
+                            <div class="list-group-item px-0 py-3 d-flex align-items-center border-start-0 border-end-0">
+                                <div class="bg-info bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-heart text-info"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Apartment Saved</h6>
+                                    <p class="mb-0 text-muted small">You added Spacious Family Apartment to your favorites list.</p>
+                                </div>
+                                <div class="ms-auto text-end">
+                                    <span class="badge bg-secondary">3 days ago</span>
+                                </div>
+                            </div>
+                            <div class="list-group-item px-0 py-3 d-flex align-items-center border-start-0 border-end-0">
+                                <div class="bg-warning bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-exclamation-circle text-warning"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Complaint Filed</h6>
+                                    <p class="mb-0 text-muted small">You submitted a complaint regarding the heating system in your apartment.</p>
+                                </div>
+                                <div class="ms-auto text-end">
+                                    <span class="badge bg-secondary">1 week ago</span>
+                                </div>
+                            </div>
+                            <div class="list-group-item px-0 py-3 d-flex align-items-center border-start-0 border-end-0 border-bottom-0">
+                                <div class="bg-secondary bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-user text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Profile Updated</h6>
+                                    <p class="mb-0 text-muted small">You updated your profile information and contact details.</p>
+                                </div>
+                                <div class="ms-auto text-end">
+                                    <span class="badge bg-secondary">2 weeks ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white text-center">
+                        <a href="#" class="btn btn-sm btn-link text-decoration-none">View All Activity</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommended Apartments -->
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0">Recommended For You</h5>
+                        <!-- user-recommendations.html -->
+                        <a href="#" class="btn btn-sm btn-link text-decoration-none">View All</a>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="list-group list-group-flush">
+                            <!-- user-apartment-details.html -->
+                            <a href="#" class="list-group-item list-group-item-action p-3">
+                                <div class="row g-0">
+                                    <div class="col-4">
+                                        <!-- src/images/Gallery-Portrait-5-150x150.jpg -->
+                                        <img src="../Project/src/images/Gallery-Portrait-6-150x150.jpg" class="img-fluid rounded" alt="Apartment">
+                                    </div>
+                                    <div class="col-8 ps-3">
+                                        <h6 class="mb-1">Luxury Downtown Loft</h6>
+                                        <p class="mb-1 small text-muted">2 bed • 2 bath • $1,850/mo</p>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span class="text-muted ms-1">4.5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- user-apartment-details.html -->
+                            <a href="#" class="list-group-item list-group-item-action p-3">
+                                <div class="row g-0">
+                                    <div class="col-4">
+                                        <img src="../Project/src/images/Gallery-Landscape-14-150x150.jpg" class="img-fluid rounded" alt="Apartment">
+                                    </div>
+                                    <div class="col-8 ps-3">
+                                        <h6 class="mb-1">Modern Studio Apartment</h6>
+                                        <p class="mb-1 small text-muted">Studio • 1 bath • $1,100/mo</p>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span class="text-muted ms-1">4.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- user-apartment-details.html -->
+                            <a href="#" class="list-group-item list-group-item-action p-3">
+                                <div class="row g-0">
+                                    <div class="col-4">
+                                        <img src="../Project/src/images/Gallery-Landscape-18-150x150.jpg" class="img-fluid rounded" alt="Apartment">
+                                    </div>
+                                    <div class="col-8 ps-3">
+                                        <h6 class="mb-1">Spacious Family Apartment</h6>
+                                        <p class="mb-1 small text-muted">3 bed • 2 bath • $2,200/mo</p>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span class="text-muted ms-1">5.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Tours -->
+                <div class="card border-0 shadow-sm mt-4">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="card-title mb-0">Upcoming Tours</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded me-3 text-center" style="min-width: 70px;">
+                                <div class="fw-bold">MAY</div>
+                                <div class="fs-4">15</div>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Luxury Downtown Loft</h6>
+                                <p class="mb-0 text-muted small">2:00 PM - 2:30 PM</p>
+                            </div>
+                            <div class="ms-auto">
+                                <button class="btn btn-sm btn-outline-secondary">Reschedule</button>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded me-3 text-center" style="min-width: 70px;">
+                                <div class="fw-bold">MAY</div>
+                                <div class="fs-4">18</div>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Modern Studio Apartment</h6>
+                                <p class="mb-0 text-muted small">10:00 AM - 10:30 AM</p>
+                            </div>
+                            <div class="ms-auto">
+                                <button class="btn btn-sm btn-outline-secondary">Reschedule</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer bg-white text-center">
+                        <!-- user-tours.html -->
+                        <a href="#" class="btn btn-sm btn-primary">Schedule New Tour</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5><i class="fas fa-building me-2"></i> The Next Apartment</h5>
+                    <p class="small">Providing quality living spaces for individuals and families since 2010.</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="apartments.html" class="text-white text-decoration-none">Apartments</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Information</h5>
+                    <ul class="list-unstyled small">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Apartment Ave, Lahore, Pakistan</li>
+                        <li><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@thenextapartment.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center small">
+                <p class="mb-0">&copy; 2023 The Next Apartment. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

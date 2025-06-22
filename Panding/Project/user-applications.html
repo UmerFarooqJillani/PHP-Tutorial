@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Applications - The Next Apartment</title>
+    <link rel="shortcut icon" href="/../Project/src/Favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- <i class="fas fa-building me-2"></i> -->
+                <img src="../Project/src/images/nestapt.spng_.png" alt="" width="55" height="55">
+                The Next Apartment
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="apartments.html">Apartments For Rent</a></li>
+                            <li><a class="dropdown-item" href="reviews.html">Reviews</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <!-- User Dropdown -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
+                            <img src="/../Project/src/images/John.png" class="rounded-circle me-2" alt="User" width="32" height="32">
+                            <span>John Doe</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="user-dashboard.html"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a></li>
+                            <!-- user-profile.html -->
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>My Profile</a></li>
+                            <li><a class="dropdown-item" href="user-favorites.html"><i class="fas fa-heart me-2"></i>Favorites</a></li>
+                            <li><a class="dropdown-item active" href="user-applications.html"><i class="fas fa-file-alt me-2"></i>My Applications</a></li>
+                            <li><a class="dropdown-item" href="user-complaints.html"><i class="fas fa-exclamation-circle me-2"></i>Complaints</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <!-- user-settings.html -->
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                            <li><a class="dropdown-item" href="signin.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- User Applications Content -->
+    <div class="container py-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h1 class="mb-0">My Applications</h1>
+                <p class="text-muted">Track the status of your apartment applications and contracts.</p>
+            </div>
+            <div>
+                <!-- user-new-application.html -->
+                <a href="signin.html" class="btn btn-primary">
+                    <i class="fas fa-plus me-2"></i>New Application
+                </a>
+            </div>
+        </div>
+
+        <!-- Applications Tabs -->
+        <ul class="nav nav-tabs mb-4" id="applicationsTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="active-tab" data-bs-toggle="tab" data-bs-target="#active" type="button" role="tab" aria-controls="active" aria-selected="true">
+                    Active Applications <span class="badge bg-primary ms-2">2</span>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contracts-tab" data-bs-toggle="tab" data-bs-target="#contracts" type="button" role="tab" aria-controls="contracts" aria-selected="false">
+                    My Contracts <span class="badge bg-success ms-2">1</span>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="history-tab" data-bs-toggle="tab" data-bs-target="#history" type="button" role="tab" aria-controls="history" aria-selected="false">
+                    Application History <span class="badge bg-secondary ms-2">3</span>
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="applicationsTabContent">
+            <!-- Active Applications Tab -->
+            <div class="tab-pane fade show active" id="active" role="tabpanel" aria-labelledby="active-tab">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th scope="col">Application ID</th>
+                                        <th scope="col">Apartment</th>
+                                        <th scope="col">Submitted Date</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>APP-2023-001</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="/../Project/src/images/Gallery-Portrait-9-150x150.jpg" class="rounded me-2" alt="Apartment">
+                                                <div>
+                                                    <h6 class="mb-0">Modern Studio Apartment</h6>
+                                                    <small class="text-muted">Floor 2, Project ID: 1</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>May 10, 2023</td>
+                                        <td><span class="badge bg-warning text-dark">Under Review</span></td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#applicationDetailsModal">View Details</a>
+                                                <a href="#" class="btn btn-outline-danger">Cancel</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>APP-2023-002</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="/../Project/src/images/Gallery-Portrait-6-150x150.jpg" class="rounded me-2" alt="Apartment">
+                                                <div>
+                                                    <h6 class="mb-0">Luxury Downtown Loft</h6>
+                                                    <small class="text-muted">Floor 5, Project ID: 1</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>May 15, 2023</td>
+                                        <td><span class="badge bg-info">Document Verification</span></td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#applicationDetailsModal">View Details</a>
+                                                <a href="#" class="btn btn-outline-danger">Cancel</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Application Process Timeline -->
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="card-title mb-0">Application Process</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="timeline">
+                                    <li class="timeline-item">
+                                        <div class="timeline-marker bg-success"></div>
+                                        <div class="timeline-content">
+                                            <h6 class="mb-0">Application Submission</h6>
+                                            <p class="text-muted small mb-0">Complete and submit the application form with personal details.</p>
+                                            <span class="badge bg-success">Completed</span>
+                                        </div>
+                                    </li>
+                                    <li class="timeline-item">
+                                        <div class="timeline-marker bg-success"></div>
+                                        <div class="timeline-content">
+                                            <h6 class="mb-0">Initial Screening</h6>
+                                            <p class="text-muted small mb-0">Basic eligibility check based on provided information.</p>
+                                            <span class="badge bg-success">Completed</span>
+                                        </div>
+                                    </li>
+                                    <li class="timeline-item">
+                                        <div class="timeline-marker bg-warning"></div>
+                                        <div class="timeline-content">
+                                            <h6 class="mb-0">Document Verification</h6>
+                                            <p class="text-muted small mb-0">Verification of identity, income, and other submitted documents.</p>
+                                            <span class="badge bg-warning text-dark">In Progress</span>
+                                        </div>
+                                    </li>
+                                    <li class="timeline-item">
+                                        <div class="timeline-marker bg-secondary"></div>
+                                        <div class="timeline-content">
+                                            <h6 class="mb-0">Background Check</h6>
+                                            <p class="text-muted small mb-0">Credit and background check process.</p>
+                                            <span class="badge bg-secondary">Pending</span>
+                                        </div>
+                                    </li>
+                                    <li class="timeline-item">
+                                        <div class="timeline-marker bg-secondary"></div>
+                                        <div class="timeline-content">
+                                            <h6 class="mb-0">Final Approval</h6>
+                                            <p class="text-muted small mb-0">Final review and decision on the application.</p>
+                                            <span class="badge bg-secondary">Pending</span>
+                                        </div>
+                                    </li>
+                                    <li class="timeline-item">
+                                        <div class="timeline-marker bg-secondary"></div>
+                                        <div class="timeline-content">
+                                            <h6 class="mb-0">Contract Signing</h6>
+                                            <p class="text-muted small mb-0">Signing of lease agreement and payment of initial fees.</p>
+                                            <span class="badge bg-secondary">Pending</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contracts Tab -->
+            <div class="tab-pane fade" id="contracts" role="tabpanel" aria-labelledby="contracts-tab">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th scope="col">Contract ID</th>
+                                        <th scope="col">Apartment</th>
+                                        <th scope="col">Start Date</th>
+                                        <th scope="col">End Date</th>
+                                        <th scope="col">Monthly Rent</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>CON-1000</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="/../Project/src/images/Gallery-Portrait-4-150x150.jpg" class="rounded me-2" alt="Apartment">
+                                                <div>
+                                                    <h6 class="mb-0">Spacious Family Apartment</h6>
+                                                    <small class="text-muted">Floor 3, Project ID: 2</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Jan 1, 2023</td>
+                                        <td>Dec 31, 2023</td>
+                                        <td>$1,500.00</td>
+                                        <td><span class="badge bg-success">Active</span></td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#contractDetailsModal">View Details</a>
+                                                <!-- user-payments.html -->
+                                                <a href="#" class="btn btn-outline-success">Payments</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contract Details -->
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-white py-3">
+                                <h5 class="card-title mb-0">Contract Summary</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="text-muted">Contract ID:</span>
+                                        <span class="fw-bold">CON-1000</span>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="text-muted">Apartment:</span>
+                                        <span class="fw-bold">Spacious Family Apartment</span>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="text-muted">Contract Period:</span>
+                                        <span class="fw-bold">Jan 1, 2023 - Dec 31, 2023</span>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="text-muted">Monthly Rent:</span>
+                                        <span class="fw-bold">$1,500.00</span>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="text-muted">Security Deposit:</span>
+                                        <span class="fw-bold">$1,200.00</span>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="text-muted">Rent Due Date:</span>
+                                        <span class="fw-bold">1st of each month</span>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="text-muted">Status:</span>
+                                        <span class="badge bg-success">Active</span>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2 mt-4">
+                                    <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#contractDetailsModal">View Full Contract</a>
+                                    <a href="#" class="btn btn-outline-secondary">Download PDF</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-white py-3">
+                                <h5 class="card-title mb-0">Recent Payments</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="list-group list-group-flush">
+                                    <div class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center border-top-0">
+                                        <div>
+                                            <h6 class="mb-1">May 2023 Rent</h6>
+                                            <p class="mb-0 text-muted small">Paid on May 1, 2023</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="fw-bold">$1,500.00</span>
+                                            <div><span class="badge bg-success">Paid</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">April 2023 Rent</h6>
+                                            <p class="mb-0 text-muted small">Paid on April 1, 2023</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="fw-bold">$1,500.00</span>
+                                            <div><span class="badge bg-success">Paid</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">March 2023 Rent</h6>
+                                            <p class="mb-0 text-muted small">Paid on March 1, 2023</p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="fw-bold">$1,500.00</span>
+                                            <div><span class="badge bg-success">Paid</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-grid mt-3">
+                                    <!-- user-payments.html -->
+                                    <a href="#" class="btn btn-primary">View All Payments</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application History Tab -->
+            <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th scope="col">Application ID</th>
+                                        <th scope="col">Apartment</th>
+                                        <th scope="col">Submitted Date</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>APP-2022-001</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="/../Project/src/images/Gallery-Portrait-3-150x150.jpg" class="rounded me-2" alt="Apartment">
+                                                <div>
+                                                    <h6 class="mb-0">Spacious Family Apartment</h6>
+                                                    <small class="text-muted">Floor 3, Project ID: 2</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Dec 15, 2022</td>
+                                        <td><span class="badge bg-success">Approved</span></td>
+                                        <td>
+                                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#applicationDetailsModal">View Details</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>APP-2022-002</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="/../Project/src/images/Gallery-Landscape-18-150x150.jpg" class="rounded me-2" alt="Apartment">
+                                                <div>
+                                                    <h6 class="mb-0">Modern Studio Apartment</h6>
+                                                    <small class="text-muted">Floor 2, Project ID: 1</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Nov 10, 2022</td>
+                                        <td><span class="badge bg-danger">Rejected</span></td>
+                                        <td>
+                                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#applicationDetailsModal">View Details</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>APP-2022-003</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="/../Project/src/images/Gallery-Portrait-9-150x150.jpg" class="rounded me-2" alt="Apartment">
+                                                <div>
+                                                    <h6 class="mb-0">Luxury Downtown Loft</h6>
+                                                    <small class="text-muted">Floor 5, Project ID: 1</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Oct 5, 2022</td>
+                                        <td><span class="badge bg-secondary">Cancelled</span></td>
+                                        <td>
+                                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#applicationDetailsModal">View Details</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Details Modal -->
+    <div class="modal fade" id="applicationDetailsModal" tabindex="-1" aria-labelledby="applicationDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="applicationDetailsModalLabel">Application Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h6>Application Information</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Application ID:</span>
+                                    <span>APP-2023-001</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Submitted Date:</span>
+                                    <span>May 10, 2023</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Status:</span>
+                                    <span class="badge bg-warning text-dark">Under Review</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Apartment Information</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Apartment:</span>
+                                    <span>Modern Studio Apartment</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Floor:</span>
+                                    <span>2</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Project:</span>
+                                    <span>Luxury Apartments</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h6>Applicant Information</h6>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Name:</span>
+                                    <span>John Doe</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Email:</span>
+                                    <span>john.doe@example.com</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Phone:</span>
+                                    <span>(123) 456-7890</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Current Address:</span>
+                                    <span>123 Main St, Apt 4B</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">City, State:</span>
+                                    <span>New York, NY</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">ZIP Code:</span>
+                                    <span>10001</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h6>Employment & Income Information</h6>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Employer:</span>
+                                    <span>ABC Corporation</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Position:</span>
+                                    <span>Software Developer</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Length of Employment:</span>
+                                    <span>3 years</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Monthly Income:</span>
+                                    <span>$6,500</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Additional Income:</span>
+                                    <span>$1,200 (Freelance)</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Total Monthly Income:</span>
+                                    <span>$7,700</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h6>Application Status Timeline</h6>
+                    <ul class="timeline mb-0">
+                        <li class="timeline-item">
+                            <div class="timeline-marker bg-success"></div>
+                            <div class="timeline-content">
+                                <h6 class="mb-0">Application Submitted</h6>
+                                <p class="text-muted small mb-0">May 10, 2023 - 10:30 AM</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-marker bg-success"></div>
+                            <div class="timeline-content">
+                                <h6 class="mb-0">Initial Review Completed</h6>
+                                <p class="text-muted small mb-0">May 11, 2023 - 2:15 PM</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-marker bg-warning"></div>
+                            <div class="timeline-content">
+                                <h6 class="mb-0">Document Verification In Progress</h6>
+                                <p class="text-muted small mb-0">May 12, 2023 - 11:45 AM</p>
+                                <p class="text-muted small mb-0">Additional documents requested: Proof of employment</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Download Application</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contract Details Modal -->
+    <div class="modal fade" id="contractDetailsModal" tabindex="-1" aria-labelledby="contractDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contractDetailsModalLabel">Contract Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h6>Contract Information</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Contract ID:</span>
+                                    <span>CON-1000</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Start Date:</span>
+                                    <span>Jan 1, 2023</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">End Date:</span>
+                                    <span>Dec 31, 2023</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Status:</span>
+                                    <span class="badge bg-success">Active</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Financial Details</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Monthly Rent:</span>
+                                    <span>$1,500.00</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Security Deposit:</span>
+                                    <span>$1,200.00</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Rent Due Date:</span>
+                                    <span>1st of each month</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Late Fee:</span>
+                                    <span>$50.00 after 5th of month</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h6>Apartment Information</h6>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Apartment:</span>
+                                    <span>Spacious Family Apartment</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Floor:</span>
+                                    <span>3</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Project:</span>
+                                    <span>Affordable Housing</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Bedrooms:</span>
+                                    <span>3</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Bathrooms:</span>
+                                    <span>2</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Square Footage:</span>
+                                    <span>1,500 sq ft</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h6>Contract Terms</h6>
+                    <div class="card mb-0">
+                        <div class="card-body">
+                            <p class="small">This Residential Lease Agreement ("Agreement") is made between The Next Apartment ("Landlord") and John Doe ("Tenant") on January 1, 2023. The Landlord and Tenant may collectively be referred to as the "Parties."</p>
+                            <p class="small">The Tenant agrees to rent the residential property located at 123 Apartment Ave, Unit 3B, City, State 12345 ("Premises") for the term of 12 months beginning on January 1, 2023, and ending on December 31, 2023.</p>
+                            <p class="small">The Tenant agrees to pay a monthly rent of $1,500.00 due on the 1st day of each month. A late fee of $50.00 will be charged if rent is not received by the 5th day of the month.</p>
+                            <p class="small">The Tenant has paid a security deposit of $1,200.00, which will be returned within 30 days after the termination of this Agreement, less any deductions for damages beyond normal wear and tear.</p>
+                            <p class="small mb-0">This Agreement is subject to all applicable laws and regulations. Any modifications to this Agreement must be in writing and signed by both Parties.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Download Contract</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5><i class="fas fa-building me-2"></i> The Next Apartment</h5>
+                    <p class="small">Providing quality living spaces for individuals and families since 2010.</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="apartments.html" class="text-white text-decoration-none">Apartments</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Information</h5>
+                    <ul class="list-unstyled small">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Apartment Ave, Lahore, Pakistan</li>
+                        <li><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@thenextapartment.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center small">
+                <p class="mb-0">&copy; 2023 The Next Apartment. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            list-style: none;
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        .timeline-marker {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            left: -30px;
+            top: 6px;
+        }
+        .timeline-marker::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            height: calc(100% + 1.5rem);
+            border-left: 1px dashed #dee2e6;
+        }
+        .timeline-item:last-child .timeline-marker::before {
+            display: none;
+        }
+    </style>
+</body>
+</html>

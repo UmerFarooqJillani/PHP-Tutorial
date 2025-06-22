@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - The Next Apartment</title>
+    <link rel="shortcut icon" href="/../Project/src/Favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../Project/src/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- <i class="fas fa-building me-2"></i> -->
+                <img src="../Project/src/images/nestapt.spng_.png" alt="" width="55" height="55">
+                The Next Apartment
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="apartments.html">Apartments For Rent</a></li>
+                            <li><a class="dropdown-item active" href="reviews.html">Reviews</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signin.html">Sign In/Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Resident Reviews</h1>
+            <p class="lead">See what our residents have to say about living at The Next Apartment.</p>
+            <div class="d-flex justify-content-center align-items-center mt-3">
+                <div class="text-warning me-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="fs-4">4.8 out of 5 stars</span>
+            </div>
+            <p class="mt-2">Based on 127 reviews</p>
+        </div>
+    </header>
+
+    <!-- Review Filters -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form id="reviewFilterForm">
+                        <div class="row g-3 align-items-center">
+                            <div class="col-md-3">
+                                <label for="propertyFilter" class="form-label">Property</label>
+                                <select class="form-select" id="propertyFilter">
+                                    <option value="">All Properties</option>
+                                    <option value="downtown">Downtown Lofts</option>
+                                    <option value="parkside">Parkside Residences</option>
+                                    <option value="riverside">Riverside Apartments</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="ratingFilter" class="form-label">Rating</label>
+                                <select class="form-select" id="ratingFilter">
+                                    <option value="">All Ratings</option>
+                                    <option value="5">5 Stars</option>
+                                    <option value="4">4 Stars & Up</option>
+                                    <option value="3">3 Stars & Up</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="sortFilter" class="form-label">Sort By</label>
+                                <select class="form-select" id="sortFilter">
+                                    <option value="newest">Newest First</option>
+                                    <option value="oldest">Oldest First</option>
+                                    <option value="highest">Highest Rated</option>
+                                    <option value="lowest">Lowest Rated</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 d-flex align-items-end">
+                                <button type="submit" class="btn btn-primary w-100">Apply Filters</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Review 1 -->
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <img src="/../Project/src/images/Gallery-Landscape-18-150x150.jpg" class="rounded-circle mb-3" alt="Resident">
+                                <h5 class="mb-0">Sarah Johnson</h5>
+                                <p class="text-muted">Downtown Lofts</p>
+                                <p class="mb-0"><small class="text-muted">Resident since 2021</small></p>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="text-muted">Posted on June 15, 2023</span>
+                            </div>
+                            <h4>"Exceptional Living Experience"</h4>
+                            <p>I've been living at The Next Apartment for over a year now, and I couldn't be happier. The location is perfect, and the staff is always helpful and responsive. The amenities are top-notch, especially the fitness center and rooftop terrace. My apartment is spacious, modern, and gets great natural light. Maintenance requests are handled promptly, and the community events make it easy to meet neighbors. I highly recommend The Next Apartment to anyone looking for a quality living experience in the city.</p>
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <span class="badge bg-light text-dark">Great Location</span>
+                                <span class="badge bg-light text-dark">Helpful Staff</span>
+                                <span class="badge bg-light text-dark">Modern Amenities</span>
+                                <span class="badge bg-light text-dark">Spacious</span>
+                                <span class="badge bg-light text-dark">Responsive Maintenance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Review 2 -->
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <img src="/../Project/src/images/Gallery-Landscape-14-150x150.jpg" class="rounded-circle mb-3" alt="Resident">
+                                <h5 class="mb-0">Michael Chen</h5>
+                                <p class="text-muted">Parkside Residences</p>
+                                <p class="mb-0"><small class="text-muted">Resident since 2022</small></p>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="text-muted">Posted on May 3, 2023</span>
+                            </div>
+                            <h4>"Great Value and Community"</h4>
+                            <p>The amenities are top-notch, and the community events make it easy to meet neighbors. I love the modern design and spacious layout of my apartment. The kitchen is well-designed with plenty of counter space and storage. The location is convenient with easy access to public transportation, grocery stores, and restaurants. The only minor issue I've had is occasional noise from the street, but that's expected in a city location. Overall, I'm very satisfied with my decision to live here and plan to renew my lease.</p>
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <span class="badge bg-light text-dark">Great Amenities</span>
+                                <span class="badge bg-light text-dark">Community Events</span>
+                                <span class="badge bg-light text-dark">Modern Design</span>
+                                <span class="badge bg-light text-dark">Convenient Location</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Review 3 -->
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <img src="/../Project/src/images/Gallery-Portrait-2-150x150.jpg" class="rounded-circle mb-3" alt="Resident">
+                                <h5 class="mb-0">The Rodriguez Family</h5>
+                                <p class="text-muted">Riverside Apartments</p>
+                                <p class="mb-0"><small class="text-muted">Resident since 2020</small></p>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="text-muted">Posted on April 18, 2023</span>
+                            </div>
+                            <h4>"Perfect for Families"</h4>
+                            <p>Moving to The Next Apartment was the best decision for our family. The neighborhood is safe, and there are great schools nearby. The 3-bedroom layout is perfect for us, with plenty of space for the kids to play and for us to entertain guests. We especially appreciate the playground and green spaces around the property. The management team is responsive and friendly, always addressing any concerns promptly. The family-friendly community events are a nice touch, and we've made many friends with other families in the building. Highly recommended for families looking for a comfortable and convenient place to live.</p>
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <span class="badge bg-light text-dark">Family Friendly</span>
+                                <span class="badge bg-light text-dark">Safe Neighborhood</span>
+                                <span class="badge bg-light text-dark">Spacious</span>
+                                <span class="badge bg-light text-dark">Good Schools</span>
+                                <span class="badge bg-light text-dark">Responsive Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Review 4 -->
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <img src="/../Project/src/images/Gallery-Portrait-3-150x150.jpg" class="rounded-circle mb-3" alt="Resident">
+                                <h5 class="mb-0">Emily Watson</h5>
+                                <p class="text-muted">Downtown Lofts</p>
+                                <p class="mb-0"><small class="text-muted">Resident since 2022</small></p>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="text-muted">Posted on March 10, 2023</span>
+                            </div>
+                            <h4>"Great Location and Amenities"</h4>
+                            <p>I've been living in my studio apartment for about 6 months now, and I'm very pleased with my experience. The location is unbeatable - I can walk to work and have easy access to restaurants, shopping, and entertainment. The building amenities, especially the rooftop terrace and fitness center, are excellent. The apartment itself is well-designed with high-quality finishes. My only complaint is that the walls are a bit thin, so I sometimes hear my neighbors. The management team is responsive, though, and maintenance requests are handled quickly. Overall, I'm happy with my choice to live here.</p>
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <span class="badge bg-light text-dark">Prime Location</span>
+                                <span class="badge bg-light text-dark">Great Amenities</span>
+                                <span class="badge bg-light text-dark">Quality Finishes</span>
+                                <span class="badge bg-light text-dark">Responsive Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Review 5 -->
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <img src="/../Project/src/images/Gallery-Portrait-5-150x150.jpg" class="rounded-circle mb-3" alt="Resident">
+                                <h5 class="mb-0">James Wilson</h5>
+                                <p class="text-muted">Parkside Residences</p>
+                                <p class="mb-0"><small class="text-muted">Resident since 2021</small></p>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="text-muted">Posted on February 22, 2023</span>
+                            </div>
+                            <h4>"Exceptional Service and Beautiful Apartment"</h4>
+                            <p>I can't say enough good things about living at The Next Apartment. From the day I toured the property to now, over a year later, the experience has been outstanding. The staff goes above and beyond to make residents feel welcome and valued. My apartment is beautiful with high ceilings, large windows, and modern fixtures. The community amenities are well-maintained and actually useful - I use the gym almost daily and love the co-working space. The location is perfect for my lifestyle, with easy access to parks, restaurants, and public transportation. I've already renewed my lease for another year!</p>
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <span class="badge bg-light text-dark">Outstanding Service</span>
+                                <span class="badge bg-light text-dark">Beautiful Design</span>
+                                <span class="badge bg-light text-dark">Well-maintained Amenities</span>
+                                <span class="badge bg-light text-dark">Great Location</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <nav aria-label="Review pagination">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Write a Review -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow">
+                        <div class="card-body p-4">
+                            <h2 class="text-center mb-4">Share Your Experience</h2>
+                            <p class="text-center mb-4">Are you a current or former resident? We'd love to hear about your experience living at The Next Apartment.</p>
+                            <form id="reviewForm">
+                                <div class="mb-3">
+                                    <label for="reviewName" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="reviewName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="reviewProperty" class="form-label">Property</label>
+                                    <select class="form-select" id="reviewProperty" required>
+                                        <option value="" selected disabled>Select a property</option>
+                                        <option value="downtown">Downtown Lofts</option>
+                                        <option value="parkside">Parkside Residences</option>
+                                        <option value="riverside">Riverside Apartments</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Rating</label>
+                                    <div class="rating-stars mb-2">
+                                        <i class="far fa-star fs-4 me-1" data-rating="1"></i>
+                                        <i class="far fa-star fs-4 me-1" data-rating="2"></i>
+                                        <i class="far fa-star fs-4 me-1" data-rating="3"></i>
+                                        <i class="far fa-star fs-4 me-1" data-rating="4"></i>
+                                        <i class="far fa-star fs-4" data-rating="5"></i>
+                                    </div>
+                                    <input type="hidden" id="reviewRating" value="0" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="reviewTitle" class="form-label">Review Title</label>
+                                    <input type="text" class="form-control" id="reviewTitle" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="reviewContent" class="form-label">Your Review</label>
+                                    <textarea class="form-control" id="reviewContent" rows="5" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">What did you like most?</label>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="likeLocation">
+                                            <label class="form-check-label" for="likeLocation">Location</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="likeAmenities">
+                                            <label class="form-check-label" for="likeAmenities">Amenities</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="likeStaff">
+                                            <label class="form-check-label" for="likeStaff">Staff</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="likeValue">
+                                            <label class="form-check-label" for="likeValue">Value</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="likeDesign">
+                                            <label class="form-check-label" for="likeDesign">Design</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg">Submit Review</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Guidelines -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Review Guidelines</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="mb-3">Please follow these guidelines when submitting a review:</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    Be honest and specific about your experience
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    Focus on your personal experience living at the property
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    Mention both positive aspects and areas for improvement
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    Keep your review respectful and constructive
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-times-circle text-danger me-2"></i>
+                                    Please do not include personal information about staff or other residents
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-times-circle text-danger me-2"></i>
+                                    Avoid offensive language or content
+                                </li>
+                            </ul>
+                            <p class="mt-3 mb-0 text-muted">All reviews are moderated and typically appear within 2-3 business days after submission.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5><i class="fas fa-building me-2"></i> The Next Apartment</h5>
+                    <p>Providing quality living spaces for individuals and families since 2010.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="apartments.html" class="text-white">Apartments</a></li>
+                        <li><a href="reviews.html" class="text-white">Reviews</a></li>
+                        <li><a href="contact.html" class="text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Information</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Apartment Ave, Lahore, Pakistan</li>
+                        <li><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@thenextapartment.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM, Sat: 10AM-4PM</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 The Next Apartment. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+    <!-- <script>
+        // Simple form validation and submission
+        document.getElementById('reviewFilterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Filters applied! This would normally filter the reviews.');
+        });
+        
+        // Star rating functionality
+        const stars = document.querySelectorAll('.rating-stars i');
+        const ratingInput = document.getElementById('reviewRating');
+        
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = this.getAttribute('data-rating');
+                ratingInput.value = rating;
+                
+                // Update stars display
+                stars.forEach(s => {
+                    const sRating = s.getAttribute('data-rating');
+                    if (sRating <= rating) {
+                        s.classList.remove('far');
+                        s.classList.add('fas');
+                    } else {
+                        s.classList.remove('fas');
+                        s.classList.add('far');
+                    }
+                });
+            });
+        });
+        
+        // Review form submission
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (ratingInput.value === '0') {
+                alert('Please select a rating before submitting your review.');
+                return;
+            }
+            
+            alert('Thank you for your review! It will be published after moderation.');
+            this.reset();
+            
+            // Reset stars
+            stars.forEach(s => {
+                s.classList.remove('fas');
+                s.classList.add('far');
+            });
+            ratingInput.value = '0';
+        });
+    </script> -->

@@ -1,0 +1,178 @@
+/* Custom Styles for The Next Apartment Website */
+
+/* General Styles */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+  }
+  
+  /* Hero Carousel Section */
+  .hero-carousel-section {
+    position: relative;
+  }
+  
+  .carousel-item {
+    height: 80vh;
+    min-height: 500px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+  }
+  
+  .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .carousel-caption h1,
+  .carousel-caption p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Responsive adjustments for carousel */
+  @media (max-width: 768px) {
+    .carousel-item {
+      height: 70vh;
+      min-height: 400px;
+    }
+  
+    .carousel-caption h1 {
+      font-size: 2rem;
+    }
+  
+    .carousel-caption p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .carousel-item {
+      height: 60vh;
+      min-height: 350px;
+    }
+  }
+  
+  /* Feature Icons */
+  .feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    border-radius: 50%;
+  }
+  
+  /* Social Icons */
+  .social-icons a {
+    transition: opacity 0.3s;
+  }
+  
+  .social-icons a:hover {
+    opacity: 0.8;
+  }
+  
+  /* Card Hover Effect */
+  .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* Footer Links */
+  footer a {
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+  
+  footer a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
+  
+  /* Star Rating Hover Effect */
+  .rating-stars i {
+    cursor: pointer;
+    color: #ffc107;
+    transition: transform 0.2s;
+  }
+  
+  .rating-stars i:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Apartment Cards */
+  .apartment-card {
+    height: 100%;
+  }
+  
+  /* Testimonial Cards */
+  .testimonial-card {
+    height: 100%;
+  }
+  
+  /* Navbar Active Link */
+  .navbar-nav .nav-link.active {
+    font-weight: 600;
+  }
+  
+  /* Button Hover Effects */
+  .btn {
+    transition: transform 0.2s;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 3rem 0;
+    }
+  
+    .feature-icon {
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.5rem;
+    }
+  }
+  

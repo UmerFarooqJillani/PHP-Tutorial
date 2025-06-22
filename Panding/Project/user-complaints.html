@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Complaints - The Next Apartment</title>
+    <link rel="shortcut icon" href="/../Project/src/Favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- <i class="fas fa-building me-2"></i> -->
+                <img src="../Project/src/images/nestapt.spng_.png" alt="" width="55" height="55">  
+                The Next Apartment
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="apartments.html">Apartments For Rent</a></li>
+                            <li><a class="dropdown-item" href="reviews.html">Reviews</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <!-- User Dropdown -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
+                            <img src="/../Project/src/images/John.png" class="rounded-circle me-2" alt="User" width="32" height="32">
+                            <span>John Doe</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="user-dashboard.html"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a></li>
+                            <!-- user-profile.html -->
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>My Profile</a></li>
+                            <li><a class="dropdown-item" href="user-favorites.html"><i class="fas fa-heart me-2"></i>Favorites</a></li>
+                            <li><a class="dropdown-item" href="user-applications.html"><i class="fas fa-file-alt me-2"></i>My Applications</a></li>
+                            <li><a class="dropdown-item active" href="user-complaints.html"><i class="fas fa-exclamation-circle me-2"></i>Complaints</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <!-- user-settings.html -->
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                            <li><a class="dropdown-item" href="signin.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- User Complaints Content -->
+    <div class="container py-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h1 class="mb-0">My Complaints</h1>
+                <p class="text-muted">Submit and track your complaints and maintenance requests.</p>
+            </div>
+            <div>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newComplaintModal">
+                    <i class="fas fa-plus me-2"></i>New Complaint
+                </button>
+            </div>
+        </div>
+
+        <!-- Complaints Tabs -->
+        <ul class="nav nav-tabs mb-4" id="complaintsTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="complaints-tab" data-bs-toggle="tab" data-bs-target="#complaints" type="button" role="tab" aria-controls="complaints" aria-selected="true">
+                    Complaints <span class="badge bg-primary ms-2">2</span>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="maintenance-tab" data-bs-toggle="tab" data-bs-target="#maintenance" type="button" role="tab" aria-controls="maintenance" aria-selected="false">
+                    Maintenance Requests <span class="badge bg-primary ms-2">3</span>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="resolved-tab" data-bs-toggle="tab" data-bs-target="#resolved" type="button" role="tab" aria-controls="resolved" aria-selected="false">
+                    Resolved <span class="badge bg-secondary ms-2">4</span>
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="complaintsTabContent">
+            <!-- Complaints Tab -->
+            <div class="tab-pane fade show active" id="complaints" role="tabpanel" aria-labelledby="complaints-tab">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th scope="col">Complaint ID</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Date Submitted</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>COMP-001</td>
+                                        <td>Loud noise from neighbors during quiet hours</td>
+                                        <td>May 10, 2023</td>
+                                        <td><span class="badge bg-warning text-dark">In Progress</span></td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#complaintDetailsModal">View Details</a>
+                                                <a href="#" class="btn btn-outline-secondary">Update</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>COMP-002</td>
+                                        <td>Parking issues with unauthorized vehicles in assigned spots</td>
+                                        <td>May 15, 2023</td>
+                                        <td><span class="badge bg-info">Under Review</span></td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#complaintDetailsModal">View Details</a>
+                                                <a href="#" class="btn btn-outline-secondary">Update</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Complaint Details -->
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="card-title mb-0">Complaint Process</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="timeline">
+                                    <li class="timeline-item">
+                                        <div class="timeline-marker bg-primary"></div>
+                                        <div class="timeline-content">
+                                            <h6 class="mb-0">Complaint Submission</h6>
+                                            <p class="text-muted small mb-0">Submit your complaint through the tenant portal.</p>
+                                        </div>
+                                    </li>
+                                    <li class="timeline-item">
+                                        <div class="timeline-marker bg-primary"></div>
+                                        <div class="timeline-content">
+                                            <h6 class="mb-0">Initial Review</h6>
+                                            <p class="text-muted small mb-0">Our team reviews your complaint and categorizes it.</p>
+                                        </div>
+                                    </li>
+                                    <li class="timeline-item">
+                                        <div class="timeline-marker bg-primary"></div>
+                                        <div class="timeline-content">
+                                            <h6 class="mb-0">Investigation</h6>
+                                            <p class="text-muted small mb-0">We investigate the issue and may contact you for more information.</p>
+                                        </div>
+                                    </li>
+                                    <li class="timeline-item">
+                                        <div class="timeline-marker bg-primary"></div>
+                                        <div class="timeline-content">
+                                            <h6 class="mb-0">Resolution</h6>
+                                            <p class="text-muted small mb-0">We take appropriate action to resolve the issue.</p>
+                                        </div>
+                                    </li>
+                                    <li class="timeline-item">
+                                        <div class="timeline-marker bg-primary"></div>
+                                        <div class="timeline-content">
+                                            <h6 class="mb-0">Follow-up</h6>
+                                            <p class="text-muted small mb-0">We follow up to ensure the issue has been resolved to your satisfaction.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Maintenance Requests Tab -->
+            <div class="tab-pane fade" id="maintenance" role="tabpanel" aria-labelledby="maintenance-tab">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th scope="col">Request ID</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Date Submitted</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>MAINT-001</td>
+                                        <td>Leaking faucet in kitchen</td>
+                                        <td>May 5, 2023</td>
+                                        <td><span class="badge bg-warning text-dark">In Progress</span></td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#maintenanceDetailsModal">View Details</a>
+                                                <a href="#" class="btn btn-outline-secondary">Update</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>MAINT-002</td>
+                                        <td>Heating system not working properly</td>
+                                        <td>May 8, 2023</td>
+                                        <td><span class="badge bg-info">Scheduled</span></td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#maintenanceDetailsModal">View Details</a>
+                                                <a href="#" class="btn btn-outline-secondary">Update</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>MAINT-003</td>
+                                        <td>Broken light fixture in bathroom</td>
+                                        <td>May 12, 2023</td>
+                                        <td><span class="badge bg-primary">Pending</span></td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#maintenanceDetailsModal">View Details</a>
+                                                <a href="#" class="btn btn-outline-secondary">Update</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maintenance Request Form -->
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="card-title mb-0">Submit New Maintenance Request</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="maintenanceRequestForm">
+                            <div class="mb-3">
+                                <label for="maintenanceType" class="form-label">Maintenance Type</label>
+                                <select class="form-select" id="maintenanceType" required>
+                                    <option value="" selected disabled>Select maintenance type</option>
+                                    <option value="plumbing">Plumbing</option>
+                                    <option value="electrical">Electrical</option>
+                                    <option value="hvac">HVAC (Heating/Cooling)</option>
+                                    <option value="appliance">Appliance Repair</option>
+                                    <option value="structural">Structural</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="maintenanceDescription" class="form-label">Description of Issue</label>
+                                <textarea class="form-control" id="maintenanceDescription" rows="4" placeholder="Please provide detailed information about the issue..." required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="maintenanceLocation" class="form-label">Location in Apartment</label>
+                                <select class="form-select" id="maintenanceLocation" required>
+                                    <option value="" selected disabled>Select location</option>
+                                    <option value="kitchen">Kitchen</option>
+                                    <option value="bathroom">Bathroom</option>
+                                    <option value="bedroom">Bedroom</option>
+                                    <option value="living">Living Room</option>
+                                    <option value="dining">Dining Room</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="maintenancePriority" class="form-label">Priority Level</label>
+                                <select class="form-select" id="maintenancePriority" required>
+                                    <option value="low">Low - Not urgent, can be fixed when convenient</option>
+                                    <option value="medium" selected>Medium - Needs attention within a few days</option>
+                                    <option value="high">High - Needs prompt attention</option>
+                                    <option value="emergency">Emergency - Requires immediate attention</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="maintenanceAccess" class="form-label">Access Instructions</label>
+                                <textarea class="form-control" id="maintenanceAccess" rows="2" placeholder="Any special instructions for accessing your apartment..."></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="maintenancePhotos" class="form-label">Upload Photos (Optional)</label>
+                                <input class="form-control" type="file" id="maintenancePhotos" multiple accept="image/*">
+                                <div class="form-text">You can upload up to 3 photos (max 5MB each)</div>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="maintenancePermission" required>
+                                <label class="form-check-label" for="maintenancePermission">I give permission for maintenance staff to enter my apartment to address this issue.</label>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Submit Maintenance Request</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resolved Tab -->
+            <div class="tab-pane fade" id="resolved" role="tabpanel" aria-labelledby="resolved-tab">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Date Submitted</th>
+                                        <th scope="col">Date Resolved</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>COMP-003</td>
+                                        <td>Complaint</td>
+                                        <td>Trash not being collected regularly</td>
+                                        <td>April 15, 2023</td>
+                                        <td>April 20, 2023</td>
+                                        <td>
+                                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#resolvedDetailsModal">View Details</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>MAINT-004</td>
+                                        <td>Maintenance</td>
+                                        <td>Clogged sink in kitchen</td>
+                                        <td>April 18, 2023</td>
+                                        <td>April 19, 2023</td>
+                                        <td>
+                                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#resolvedDetailsModal">View Details</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>COMP-004</td>
+                                        <td>Complaint</td>
+                                        <td>Security concerns at main entrance</td>
+                                        <td>April 22, 2023</td>
+                                        <td>April 30, 2023</td>
+                                        <td>
+                                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#resolvedDetailsModal">View Details</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>MAINT-005</td>
+                                        <td>Maintenance</td>
+                                        <td>Broken window latch in bedroom</td>
+                                        <td>April 25, 2023</td>
+                                        <td>April 27, 2023</td>
+                                        <td>
+                                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#resolvedDetailsModal">View Details</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Satisfaction Survey -->
+                <div class="card border-0 shadow-sm mt-4">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="card-title mb-0">Satisfaction Surveys</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Please rate your satisfaction with how your complaints and maintenance requests were handled. Your feedback helps us improve our services.</p>
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center border-top-0">
+                                <div>
+                                    <h6 class="mb-1">MAINT-004: Clogged sink in kitchen</h6>
+                                    <p class="mb-0 text-muted small">Resolved on April 19, 2023</p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#surveyModal">Submit Survey</button>
+                                </div>
+                            </div>
+                            <div class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1">COMP-003: Trash not being collected regularly</h6>
+                                    <p class="mb-0 text-muted small">Resolved on April 20, 2023</p>
+                                </div>
+                                <div>
+                                    <span class="badge bg-success">Survey Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Complaint Modal -->
+    <div class="modal fade" id="newComplaintModal" tabindex="-1" aria-labelledby="newComplaintModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newComplaintModalLabel">Submit New Complaint</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="newComplaintForm">
+                        <div class="mb-3">
+                            <label for="complaintType" class="form-label">Complaint Type</label>
+                            <select class="form-select" id="complaintType" required>
+                                <option value="" selected disabled>Select complaint type</option>
+                                <option value="noise">Noise Disturbance</option>
+                                <option value="neighbor">Neighbor Issues</option>
+                                <option value="common">Common Area Issues</option>
+                                <option value="security">Security Concerns</option>
+                                <option value="parking">Parking Issues</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="complaintDescription" class="form-label">Description of Complaint</label>
+                            <textarea class="form-control" id="complaintDescription" rows="4" placeholder="Please provide detailed information about your complaint..." required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="complaintDate" class="form-label">Date of Incident</label>
+                            <input type="date" class="form-control" id="complaintDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="complaintTime" class="form-label">Time of Incident</label>
+                            <input type="time" class="form-control" id="complaintTime">
+                        </div>
+                        <div class="mb-3">
+                            <label for="complaintLocation" class="form-label">Location of Incident</label>
+                            <input type="text" class="form-control" id="complaintLocation" placeholder="e.g., Hallway, Parking lot, etc." required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="complaintPriority" class="form-label">Priority Level</label>
+                            <select class="form-select" id="complaintPriority" required>
+                                <option value="low">Low - Not urgent</option>
+                                <option value="medium" selected>Medium - Needs attention soon</option>
+                                <option value="high">High - Needs prompt attention</option>
+                                <option value="urgent">Urgent - Requires immediate attention</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="complaintEvidence" class="form-label">Upload Evidence (Optional)</label>
+                            <input class="form-control" type="file" id="complaintEvidence" multiple accept="image/*,video/*">
+                            <div class="form-text">You can upload photos or videos as evidence (max 10MB each)</div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="complaintAnonymous">
+                            <label class="form-check-label" for="complaintAnonymous">Submit this complaint anonymously</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="document.getElementById('newComplaintForm').checkValidity() && alert('Complaint submitted successfully!')">Submit Complaint</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Complaint Details Modal -->
+    <div class="modal fade" id="complaintDetailsModal" tabindex="-1" aria-labelledby="complaintDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="complaintDetailsModalLabel">Complaint Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h6>Complaint Information</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Complaint ID:</span>
+                                    <span>COMP-001</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Type:</span>
+                                    <span>Noise Disturbance</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Submitted Date:</span>
+                                    <span>May 10, 2023</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Status:</span>
+                                    <span class="badge bg-warning text-dark">In Progress</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Incident Details</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Date of Incident:</span>
+                                    <span>May 9, 2023</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Time of Incident:</span>
+                                    <span>11:30 PM</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Location:</span>
+                                    <span>Apartment above (Unit 4B)</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Priority:</span>
+                                    <span>Medium</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h6>Description</h6>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <p class="mb-0">Loud music and stomping noises from the apartment above (Unit 4B) during quiet hours (after 10 PM). This has happened several times in the past week, making it difficult to sleep. I have tried knocking on their door to discuss the issue, but no one answered.</p>
+                        </div>
+                    </div>
+
+                    <h6>Resolution Progress</h6>
+                    <ul class="timeline mb-0">
+                        <li class="timeline-item">
+                            <div class="timeline-marker bg-success"></div>
+                            <div class="timeline-content">
+                                <h6 class="mb-0">Complaint Received</h6>
+                                <p class="text-muted small mb-0">May 10, 2023 - 9:15 AM</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-marker bg-success"></div>
+                            <div class="timeline-content">
+                                <h6 class="mb-0">Initial Review</h6>
+                                <p class="text-muted small mb-0">May 10, 2023 - 11:30 AM</p>
+                                <p class="text-muted small mb-0">Complaint has been reviewed and categorized as a noise disturbance issue.</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-marker bg-warning"></div>
+                            <div class="timeline-content">
+                                <h6 class="mb-0">Investigation In Progress</h6>
+                                <p class="text-muted small mb-0">May 11, 2023 - 2:45 PM</p>
+                                <p class="text-muted small mb-0">Management has contacted the resident of Unit 4B regarding the noise complaint.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Update Complaint</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Maintenance Details Modal -->
+    <div class="modal fade" id="maintenanceDetailsModal" tabindex="-1" aria-labelledby="maintenanceDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="maintenanceDetailsModalLabel">Maintenance Request Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h6>Request Information</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Request ID:</span>
+                                    <span>MAINT-001</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Type:</span>
+                                    <span>Plumbing</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Submitted Date:</span>
+                                    <span>May 5, 2023</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Status:</span>
+                                    <span class="badge bg-warning text-dark">In Progress</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Service Details</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Location:</span>
+                                    <span>Kitchen</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Priority:</span>
+                                    <span>Medium</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Scheduled Date:</span>
+                                    <span>May 13, 2023</span>
+                                </li>
+                                <li class="list-group-item px-0 py-2 d-flex justify-content-between">
+                                    <span class="text-muted">Scheduled Time:</span>
+                                    <span>10:00 AM - 12:00 PM</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h6>Description</h6>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <p class="mb-0">The kitchen sink faucet is leaking from the base whenever it's turned on. Water is pooling around the sink and has started to damage the cabinet underneath. The leak seems to be getting worse over the past few days.</p>
+                        </div>
+                    </div>
+
+                    <h6>Service Progress</h6>
+                    <ul class="timeline mb-0">
+                        <li class="timeline-item">
+                            <div class="timeline-marker bg-success"></div>
+                            <div class="timeline-content">
+                                <h6 class="mb-0">Request Received</h6>
+                                <p class="text-muted small mb-0">May 5, 2023 - 3:45 PM</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-marker bg-success"></div>
+                            <div class="timeline-content">
+                                <h6 class="mb-0">Request Approved</h6>
+                                <p class="text-muted small mb-0">May 6, 2023 - 10:15 AM</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-marker bg-success"></div>
+                            <div class="timeline-content">
+                                <h6 class="mb-0">Service Scheduled</h6>
+                                <p class="text-muted small mb-0">May 7, 2023 - 9:30 AM</p>
+                                <p class="text-muted small mb-0">Maintenance visit scheduled for May 13, 2023, between 10:00 AM and 12:00 PM.</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-marker bg-warning"></div>
+                            <div class="timeline-content">
+                                <h6 class="mb-0">Parts Ordered</h6>
+                                <p class="text-muted small mb-0">May 8, 2023 - 2:15 PM</p>
+                                <p class="text-muted small mb-0">Replacement parts have been ordered and are expected to arrive by May 12.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Update Request</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Satisfaction Survey Modal -->
+    <div class="modal fade" id="surveyModal" tabindex="-1" aria-labelledby="surveyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="surveyModalLabel">Satisfaction Survey</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="satisfactionSurveyForm">
+                        <div class="mb-3">
+                            <label class="form-label">How would you rate the overall resolution of your request?</label>
+                            <div class="rating-stars d-flex justify-content-center fs-2 mb-2">
+                                <i class="far fa-star text-warning me-1" data-rating="1"></i>
+                                <i class="far fa-star text-warning me-1" data-rating="2"></i>
+                                <i class="far fa-star text-warning me-1" data-rating="3"></i>
+                                <i class="far fa-star text-warning me-1" data-rating="4"></i>
+                                <i class="far fa-star text-warning" data-rating="5"></i>
+                            </div>
+                            <input type="hidden" id="surveyRating" value="0" required>
+                            <div class="text-center mb-3">
+                                <span id="ratingText" class="text-muted">Click to rate</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="responseTime" class="form-label">How satisfied were you with the response time?</label>
+                            <select class="form-select" id="responseTime" required>
+                                <option value="" selected disabled>Select your answer</option>
+                                <option value="very_satisfied">Very Satisfied</option>
+                                <option value="satisfied">Satisfied</option>
+                                <option value="neutral">Neutral</option>
+                                <option value="dissatisfied">Dissatisfied</option>
+                                <option value="very_dissatisfied">Very Dissatisfied</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="staffProfessionalism" class="form-label">How would you rate the professionalism of our staff?</label>
+                            <select class="form-select" id="staffProfessionalism" required>
+                                <option value="" selected disabled>Select your answer</option>
+                                <option value="excellent">Excellent</option>
+                                <option value="good">Good</option>
+                                <option value="average">Average</option>
+                                <option value="poor">Poor</option>
+                                <option value="very_poor">Very Poor</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="qualityOfWork" class="form-label">How satisfied were you with the quality of work?</label>
+                            <select class="form-select" id="qualityOfWork" required>
+                                <option value="" selected disabled>Select your answer</option>
+                                <option value="very_satisfied">Very Satisfied</option>
+                                <option value="satisfied">Satisfied</option>
+                                <option value="neutral">Neutral</option>
+                                <option value="dissatisfied">Dissatisfied</option>
+                                <option value="very_dissatisfied">Very Dissatisfied</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="surveyComments" class="form-label">Additional Comments</label>
+                            <textarea class="form-control" id="surveyComments" rows="3" placeholder="Please share any additional feedback or suggestions..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="document.getElementById('satisfactionSurveyForm').checkValidity() && alert('Survey submitted successfully!')">Submit Survey</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5><i class="fas fa-building me-2"></i> The Next Apartment</h5>
+                    <p class="small">Providing quality living spaces for individuals and families since 2010.</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="apartments.html" class="text-white text-decoration-none">Apartments</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Information</h5>
+                    <ul class="list-unstyled small">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Apartment Ave, Lahore, Pakistan</li>
+                        <li><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@thenextapartment.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center small">
+                <p class="mb-0">&copy; 2023 The Next Apartment. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            list-style: none;
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        .timeline-marker {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            left: -30px;
+            top: 6px;
+        }
+        .timeline-marker::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            height: calc(100% + 1.5rem);
+            border-left: 1px dashed #dee2e6;
+        }
+        .timeline-item:last-child .timeline-marker::before {
+            display: none;
+        }
+    </style>
+</body>
+</html>
+
+
+    <!-- <script>
+        // Star rating functionality
+        const stars = document.querySelectorAll('.rating-stars i');
+        const ratingInput = document.getElementById('surveyRating');
+        const ratingText = document.getElementById('ratingText');
+        
+        const ratingTexts = [
+            'Click to rate',
+            'Poor',
+            'Fair',
+            'Good',
+            'Very Good',
+            'Excellent'
+        ];
+        
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = this.getAttribute('data-rating');
+                ratingInput.value = rating;
+                
+                // Update stars display
+                stars.forEach(s => {
+                    const sRating = s.getAttribute('data-rating');
+                    if (sRating <= rating) {
+                        s.classList.remove('far');
+                        s.classList.add('fas');
+                    } else {
+                        s.classList.remove('fas');
+                        s.classList.add('far');
+                    }
+                });
+                
+                // Update rating text
+                ratingText.textContent = ratingTexts[rating];
+            });
+        });
+    </script> -->
