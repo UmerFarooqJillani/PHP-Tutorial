@@ -91,3 +91,4 @@ Hey, This's a first script of PHP
 ```
 
 --- 
+**Author:** [Umer Farooq Jillani](https://github.com/UmerFarooqJillani/)
